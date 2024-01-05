@@ -9,7 +9,7 @@ const ProductProvider = ({ children }) => {
   const getProducts = async () => {
     setLoading(true);
     await fetch(
-      "http://www.api.technicaltest.quadtheoryltd.com/api/Item?page=1&pageSize=10",
+      "https://cors-anywhere.herokuapp.com/http://www.api.technicaltest.quadtheoryltd.com/api/Item?page=1&pageSize=10",
       {
         // ...
         referrerPolicy: "unsafe_url",
