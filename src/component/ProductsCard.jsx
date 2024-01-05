@@ -5,7 +5,16 @@ import { MdKeyboardArrowRight } from "react-icons/md";
 import { MdKeyboardArrowLeft } from "react-icons/md";
 import { useForm } from "react-hook-form";
 
-const ProductsCard = ({ products, title }) => {
+import cake from "../assets/images/Cake.jpg";
+import burger from "../assets/images/burger.jpg";
+import Cappuchino from "../assets/images/Cappuchino.jpg";
+import ChickenFry from "../assets/images/ChickenFry.jpg";
+import FriedRice from "../assets/images/FriedRice.jpg";
+import GarlicBread from "../assets/images/GarlicBread.jpg";
+import Pasta from "../assets/images/Pasta.jpg";
+import Pizza from "../assets/images/Pizza.jpg";
+
+const ProductsCard = ({ title }) => {
   const {
     register,
     handleSubmit,
@@ -173,7 +182,9 @@ const ProductsCard = ({ products, title }) => {
         modules={[Pagination]}
         className="mySwiper mb-10"
       >
-        {products?.map((item) => (
+        {/* here we face same  HTTPS ERROR So we add data manually */}
+
+        {/* {products?.map((item) => (
           <SwiperSlide key={item.Id}>
             <img
               className="rounded-2xl w-80 lg:h-96 h-44"
@@ -184,7 +195,90 @@ const ProductsCard = ({ products, title }) => {
               {item.Name}
             </h3>
           </SwiperSlide>
-        ))}
+        ))} */}
+
+        {/* here we add data manually  */}
+
+        <SwiperSlide>
+          <img
+            className="rounded-2xl w-80 lg:h-96 h-44"
+            src={cake}
+            alt="slide1"
+          />
+          <h3 className="mt-2 font-bold  text-gray-500  text-center uppercase">
+            Cake
+          </h3>
+        </SwiperSlide>
+        <SwiperSlide>
+          <img
+            className="rounded-2xl w-80 lg:h-96 h-44"
+            src={burger}
+            alt="slide1"
+          />
+          <h3 className="mt-2 font-bold  text-gray-500  text-center uppercase">
+            burger
+          </h3>
+        </SwiperSlide>
+        <SwiperSlide>
+          <img
+            className="rounded-2xl w-80 lg:h-96 h-44"
+            src={Cappuchino}
+            alt="slide1"
+          />
+          <h3 className="mt-2 font-bold  text-gray-500  text-center uppercase">
+            Cappuchino
+          </h3>
+        </SwiperSlide>
+        <SwiperSlide>
+          <img
+            className="rounded-2xl w-80 lg:h-96 h-44"
+            src={ChickenFry}
+            alt="slide1"
+          />
+          <h3 className="mt-2 font-bold  text-gray-500  text-center uppercase">
+            ChickenFry
+          </h3>
+        </SwiperSlide>
+        <SwiperSlide>
+          <img
+            className="rounded-2xl w-80 lg:h-96 h-44"
+            src={FriedRice}
+            alt="slide1"
+          />
+          <h3 className="mt-2 font-bold  text-gray-500  text-center uppercase">
+            FriedRice
+          </h3>
+        </SwiperSlide>
+        <SwiperSlide>
+          <img
+            className="rounded-2xl w-80 lg:h-96 h-44"
+            src={GarlicBread}
+            alt="slide1"
+          />
+          <h3 className="mt-2 font-bold  text-gray-500  text-center uppercase">
+            GarlicBread
+          </h3>
+        </SwiperSlide>
+        <SwiperSlide>
+          <img
+            className="rounded-2xl w-80 lg:h-96 h-44"
+            src={Pasta}
+            alt="slide1"
+          />
+          <h3 className="mt-2 font-bold  text-gray-500  text-center uppercase">
+            Pasta
+          </h3>
+        </SwiperSlide>
+        <SwiperSlide>
+          <img
+            className="rounded-2xl w-80 lg:h-96 h-44"
+            src={Pizza}
+            alt="slide1"
+          />
+          <h3 className="mt-2 font-bold  text-gray-500  text-center uppercase">
+            Pizza
+          </h3>
+        </SwiperSlide>
       </Swiper>
     </div>
   );

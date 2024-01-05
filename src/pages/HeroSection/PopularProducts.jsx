@@ -4,6 +4,7 @@ import ProductsCard from "../../component/ProductsCard";
 
 const PopularProducts = () => {
   const { products } = useContext(ProductContext);
+  // show only popular products
   const popularProducts = products.filter((item) => item.IsPopular === true);
   return (
     <div>
