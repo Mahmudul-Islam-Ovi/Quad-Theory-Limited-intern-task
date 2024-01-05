@@ -9,11 +9,8 @@ const ProductProvider = ({ children }) => {
   const getProducts = async () => {
     setLoading(true);
     await fetch(
-      "https://cors-anywhere.herokuapp.com/http://www.api.technicaltest.quadtheoryltd.com/api/Item?page=1&pageSize=10"
+      "http://www.api.technicaltest.quadtheoryltd.com/api/Item?page=1&pageSize=10"
     )
-      // await fetch(
-      //   "http://www.api.technicaltest.quadtheoryltd.com/api/Item?page=1&pageSize=10"
-      // )
       .then((res) => res.json())
       .then((data) => setProducts(data.Items));
     setLoading(false);
