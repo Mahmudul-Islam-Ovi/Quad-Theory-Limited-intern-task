@@ -9,8 +9,15 @@ const ProductProvider = ({ children }) => {
   const getProducts = async () => {
     setLoading(true);
     await fetch(
-      "http://www.api.technicaltest.quadtheoryltd.com/api/Item?page=1&pageSize=10"
+      "http://www.api.technicaltest.quadtheoryltd.com/api/Item?page=1&pageSize=10",
+      {
+        // ...
+        referrerPolicy: "unsafe_url",
+      }
     )
+      // await fetch(
+      //   "http://www.api.technicaltest.quadtheoryltd.com/api/Item?page=1&pageSize=10"
+      // )
       .then((res) => res.json())
       .then((data) => setProducts(data.Items));
     setLoading(false);
