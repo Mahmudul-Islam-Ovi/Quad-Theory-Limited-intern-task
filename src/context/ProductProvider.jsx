@@ -9,7 +9,12 @@ const ProductProvider = ({ children }) => {
   const getProducts = async () => {
     setLoading(true);
     await fetch(
-      "http://www.api.technicaltest.quadtheoryltd.com/api/Item?page=1&pageSize=10"
+      // Mixed Content: The page at 'https://imaginative-licorice-69df63.netlify.app/' was loaded over HTTPS, but requested an insecure resource 'http://www.api.technicaltest.quadtheoryltd.com/api/Item?page=1&pageSize=10'. This request has been blocked; the content must be served over HTTPS.
+
+
+      // "http://www.api.technicaltest.quadtheoryltd.com/api/Item?page=1&pageSize=10"
+
+      "./data.json"
     )
       .then((res) => res.json())
       .then((data) => setProducts(data.Items));
